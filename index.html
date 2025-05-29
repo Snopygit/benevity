@@ -66,6 +66,16 @@
             color: #ccc;
         }
 
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset for fixed header */
+        section {
+            scroll-margin-top: 100px;
+        }
+
         .cart-icon {
             background: none;
             border: none;
@@ -615,10 +625,11 @@
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Kategorien</a></li>
+                    <li><a href="#products">Featured</a></li>
                     <li><a href="#vintage">Vintage</a></li>
                     <li><a href="#streetwear">Streetwear</a></li>
                     <li><a href="#designer">Designer</a></li>
-                    <li><a href="#accessories">Accessories</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </nav>
@@ -626,7 +637,16 @@
                 <span id="cart-text">Cart</span>
                 <span class="cart-count" id="cart-count">0</span>
             </button>
-        </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
     </header>
 
     <!-- Announcement -->
@@ -643,18 +663,18 @@
     </section>
 
     <!-- Categories -->
-    <section class="categories">
+    <section class="categories" id="categories">
         <h2>Kategorien</h2>
         <div class="category-grid">
-            <div class="category-item">
+            <div class="category-item" id="vintage">
                 <h3>Vintage Archive</h3>
                 <p>Seltene Vintage-Stücke aus den 80ern, 90ern und frühen 2000ern. Jedes Stück erzählt eine Geschichte.</p>
             </div>
-            <div class="category-item">
+            <div class="category-item" id="streetwear">
                 <h3>Streetwear Grails</h3>
                 <p>Limitierte Drops, seltene Collabs und ausverkaufte Pieces von Supreme, Off-White, Travis Scott und mehr.</p>
             </div>
-            <div class="category-item">
+            <div class="category-item" id="designer">
                 <h3>Designer Archive</h3>
                 <p>Luxus-Pieces von Balenciaga, Vetements, Rick Owens und anderen High-End Brands zu fairen Preisen.</p>
             </div>
@@ -666,7 +686,7 @@
     </section>
 
     <!-- Featured Products -->
-    <section class="products">
+    <section class="products" id="products">
         <h2>Featured Items</h2>
         <div class="product-grid">
             <div class="product-card">
@@ -732,47 +752,51 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="about">
         <div class="footer-content">
+            <div class="footer-section">
+                <h4>Über Benevity</h4>
+                <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                    Wir sind Experten für seltene und authentische Streetwear, Vintage-Pieces und Designer-Kleidung. 
+                    Jedes Stück wird sorgfältig kuratiert und auf Echtheit geprüft.
+                </p>
+                <ul>
+                    <li><a href="#">Unsere Story</a></li>
+                    <li><a href="#">Authentizitäts-Check</a></li>
+                    <li><a href="#">Nachhaltigkeit</a></li>
+                </ul>
+            </div>
             <div class="footer-section">
                 <h4>Shop</h4>
                 <ul>
-                    <li><a href="#">Neue Arrivals</a></li>
+                    <li><a href="#products">Featured Items</a></li>
+                    <li><a href="#vintage">Vintage Archive</a></li>
+                    <li><a href="#streetwear">Streetwear Grails</a></li>
+                    <li><a href="#designer">Designer Archive</a></li>
                     <li><a href="#">Sale</a></li>
-                    <li><a href="#">Vintage</a></li>
-                    <li><a href="#">Streetwear</a></li>
-                    <li><a href="#">Designer</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Service</h4>
                 <ul>
                     <li><a href="#">Größenguide</a></li>
-                    <li><a href="#">Authentizität</a></li>
+                    <li><a href="#">Authentizitäts-Check</a></li>
                     <li><a href="#">Versand & Rückgabe</a></li>
                     <li><a href="#">Pflege-Guide</a></li>
                     <li><a href="#">Kontakt</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Info</h4>
+                <h4>Legal</h4>
                 <ul>
-                    <li><a href="#">Über uns</a></li>
                     <li><a href="#">AGB</a></li>
                     <li><a href="#">Datenschutz</a></li>
                     <li><a href="#">Impressum</a></li>
                     <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Widerrufsrecht</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Follow</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </div>
+        </div>
         </div>
         <div class="footer-bottom">
             © 2025 Benevity. Alle Rechte vorbehalten.

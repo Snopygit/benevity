@@ -416,7 +416,7 @@
             margin-top: 80px;
         }
 
-        /* Categories Overview */
+        /* Categories */
         .categories {
             padding: 80px 20px;
             max-width: 1400px;
@@ -480,7 +480,7 @@
             line-height: 1.6;
         }
 
-        /* Product Sections */
+        /* Product Grid */
         .products {
             padding: 80px 20px;
             max-width: 1400px;
@@ -490,20 +490,9 @@
         .products h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
             letter-spacing: 3px;
             text-transform: uppercase;
-        }
-
-        .section-description {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
         }
 
         .product-grid {
@@ -558,19 +547,6 @@
             font-size: 1.3rem;
             font-weight: bold;
             color: #fff;
-        }
-
-        /* Category Badge */
-        .category-badge {
-            display: inline-block;
-            background: #333;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            border: 1px solid #555;
         }
 
         /* Footer */
@@ -654,7 +630,6 @@
                     <li><a href="#vintage">Vintage</a></li>
                     <li><a href="#streetwear">Streetwear</a></li>
                     <li><a href="#designer">Designer</a></li>
-                    <li><a href="#rare-finds">Rare Finds</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
             </nav>
@@ -662,7 +637,16 @@
                 <span id="cart-text">Cart</span>
                 <span class="cart-count" id="cart-count">0</span>
             </button>
-        </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
     </header>
 
     <!-- Announcement -->
@@ -678,23 +662,23 @@
         </div>
     </section>
 
-    <!-- Categories Overview -->
+    <!-- Categories -->
     <section class="categories" id="categories">
         <h2>Kategorien</h2>
         <div class="category-grid">
-            <div class="category-item" onclick="scrollToSection('vintage')">
+            <div class="category-item" id="vintage">
                 <h3>Vintage Archive</h3>
                 <p>Seltene Vintage-Stücke aus den 80ern, 90ern und frühen 2000ern. Jedes Stück erzählt eine Geschichte.</p>
             </div>
-            <div class="category-item" onclick="scrollToSection('streetwear')">
+            <div class="category-item" id="streetwear">
                 <h3>Streetwear Grails</h3>
                 <p>Limitierte Drops, seltene Collabs und ausverkaufte Pieces von Supreme, Off-White, Travis Scott und mehr.</p>
             </div>
-            <div class="category-item" onclick="scrollToSection('designer')">
+            <div class="category-item" id="designer">
                 <h3>Designer Archive</h3>
                 <p>Luxus-Pieces von Balenciaga, Vetements, Rick Owens und anderen High-End Brands zu fairen Preisen.</p>
             </div>
-            <div class="category-item" onclick="scrollToSection('rare-finds')">
+            <div class="category-item">
                 <h3>Rare Finds</h3>
                 <p>Einzigartige Stücke, Samples und Prototypen, die man sonst nirgendwo findet.</p>
             </div>
@@ -704,12 +688,10 @@
     <!-- Featured Products -->
     <section class="products" id="products">
         <h2>Featured Items</h2>
-        <p class="section-description">Handverlesene Highlights aus allen Kategorien - die Must-Haves dieser Saison</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-image">[Produktbild - Vintage Band Tee]</div>
                 <div class="product-info">
-                    <div class="category-badge">Vintage</div>
                     <h3>Vintage Nirvana Tour Tee 1993</h3>
                     <p>Original Tour Merchandise, Größe L, seltener Faded Look</p>
                     <div class="product-price">€250</div>
@@ -720,7 +702,6 @@
             <div class="product-card">
                 <div class="product-image">[Produktbild - Supreme Hoodie]</div>
                 <div class="product-info">
-                    <div class="category-badge">Streetwear</div>
                     <h3>Supreme Box Logo Hoodie</h3>
                     <p>Grey Hoodie FW19, Größe M, 9/10 Condition</p>
                     <div class="product-price">€450</div>
@@ -731,106 +712,10 @@
             <div class="product-card">
                 <div class="product-image">[Produktbild - Rick Owens Jacket]</div>
                 <div class="product-info">
-                    <div class="category-badge">Designer</div>
                     <h3>Rick Owens DRKSHDW Jacket</h3>
                     <p>SS20 Collection, Größe 48, Unworn</p>
                     <div class="product-price">€680</div>
                     <button class="add-to-cart" onclick="addToCart('rick-owens-jacket', 'Rick Owens DRKSHDW Jacket', 680, 'SS20 Collection, Größe 48')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Sample Piece]</div>
-                <div class="product-info">
-                    <div class="category-badge">Rare Find</div>
-                    <h3>Prototype Hoodie Sample</h3>
-                    <p>Unreleased Design, 1/1 Piece, Größe L</p>
-                    <div class="product-price">€899</div>
-                    <button class="add-to-cart" onclick="addToCart('prototype-hoodie', 'Prototype Hoodie Sample', 899, 'Unreleased Design, 1/1 Piece, Größe L')">In den Warenkorb</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vintage Archive Section -->
-    <section class="products" id="vintage">
-        <h2>Vintage Archive</h2>
-        <p class="section-description">Authentische Vintage-Pieces aus vergangenen Dekaden. Jedes Stück wurde sorgfältig kuratiert und auf Authentizität geprüft.</p>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Vintage Band Tee]</div>
-                <div class="product-info">
-                    <h3>Vintage Nirvana Tour Tee 1993</h3>
-                    <p>Original Tour Merchandise, Größe L, seltener Faded Look</p>
-                    <div class="product-price">€250</div>
-                    <button class="add-to-cart" onclick="addToCart('nirvana-tee-v', 'Vintage Nirvana Tour Tee 1993', 250, 'Original Tour Merchandise, Größe L')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Vintage Jacket]</div>
-                <div class="product-info">
-                    <h3>90s Carhartt Detroit Jacket</h3>
-                    <p>USA Made, Größe XL, Perfekte Patina</p>
-                    <div class="product-price">€180</div>
-                    <button class="add-to-cart" onclick="addToCart('carhartt-jacket-v', '90s Carhartt Detroit Jacket', 180, 'USA Made, Größe XL')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Vintage Levi's]</div>
-                <div class="product-info">
-                    <h3>Vintage Levi's 501 Jeans</h3>
-                    <p>80s Orange Tab, W32 L34, Selvedge Denim</p>
-                    <div class="product-price">€120</div>
-                    <button class="add-to-cart" onclick="addToCart('levis-vintage', 'Vintage Levi\'s 501 Jeans', 120, '80s Orange Tab, W32 L34')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Vintage Polo]</div>
-                <div class="product-info">
-                    <h3>Vintage Ralph Lauren Polo</h3>
-                    <p>90s Stadium Collection, Größe L, Perfect Condition</p>
-                    <div class="product-price">€95</div>
-                    <button class="add-to-cart" onclick="addToCart('polo-vintage', 'Vintage Ralph Lauren Polo', 95, '90s Stadium Collection, Größe L')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Champion Sweatshirt]</div>
-                <div class="product-info">
-                    <h3>90s Champion Reverse Weave</h3>
-                    <p>University Print, Größe M, Vintage Wash</p>
-                    <div class="product-price">€85</div>
-                    <button class="add-to-cart" onclick="addToCart('champion-vintage', '90s Champion Reverse Weave', 85, 'University Print, Größe M')">In den Warenkorb</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Vintage Windbreaker]</div>
-                <div class="product-info">
-                    <h3>Vintage Nike Windbreaker</h3>
-                    <p>80s Silver Tag, Größe L, Colorblock Design</p>
-                    <div class="product-price">€145</div>
-                    <button class="add-to-cart" onclick="addToCart('nike-windbreaker', 'Vintage Nike Windbreaker', 145, '80s Silver Tag, Größe L')">In den Warenkorb</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Streetwear Grails Section -->
-    <section class="products" id="streetwear">
-        <h2>Streetwear Grails</h2>
-        <p class="section-description">Die heiligen Grale der Streetwear-Kultur. Limitierte Drops, seltene Collaborations und ausverkaufte Pieces von den begehrtesten Brands.</p>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">[Produktbild - Supreme Hoodie]</div>
-                <div class="product-info">
-                    <h3>Supreme Box Logo Hoodie</h3>
-                    <p>Grey Hoodie FW19, Größe M, 9/10 Condition</p>
-                    <div class="product-price">€450</div>
-                    <button class="add-to-cart" onclick="addToCart('supreme-hoodie-s', 'Supreme Box Logo Hoodie', 450, 'Grey Hoodie FW19, Größe M')">In den Warenkorb</button>
                 </div>
             </div>
 
@@ -840,15 +725,239 @@
                     <h3>Travis Scott Astroworld Hoodie</h3>
                     <p>Official Tour Merch 2018, Größe L, Rare Colorway</p>
                     <div class="product-price">€320</div>
-                    <button class="add-to-cart" onclick="addToCart('travis-hoodie-s', 'Travis Scott Astroworld Hoodie', 320, 'Official Tour Merch 2018, Größe L')">In den Warenkorb</button>
+                    <button class="add-to-cart" onclick="addToCart('travis-hoodie', 'Travis Scott Astroworld Hoodie', 320, 'Official Tour Merch 2018, Größe L')">In den Warenkorb</button>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="product-image">[Produktbild - Off-White Tee]</div>
+                <div class="product-image">[Produktbild - Vintage Jacket]</div>
                 <div class="product-info">
-                    <h3>Off-White Caravaggio Tee</h3>
-                    <p>SS18 Collection, Größe M, VNDS Condition</p>
-                    <div class="product-price">€280</div>
-                    <button class="add-to-cart" onclick="addToCart('offwhite-tee', 'Off-White Caravaggio Tee', 280, 'SS18 Collection, Größe M')">In den Warenkorb</button>
+                    <h3>90s Carhartt Detroit Jacket</h3>
+                    <p>USA Made, Größe XL, Perfekte Patina</p>
+                    <div class="product-price">€180</div>
+                    <button class="add-to-cart" onclick="addToCart('carhartt-jacket', '90s Carhartt Detroit Jacket', 180, 'USA Made, Größe XL')">In den Warenkorb</button>
                 </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">[Produktbild - Designer Sneakers]</div>
+                <div class="product-info">
+                    <h3>Balenciaga Triple S</h3>
+                    <p>White/Black Colorway, Größe 42, Box + Dustbag</p>
+                    <div class="product-price">€550</div>
+                    <button class="add-to-cart" onclick="addToCart('balenciaga-sneakers', 'Balenciaga Triple S', 550, 'White/Black Colorway, Größe 42')">In den Warenkorb</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Über Benevity</h4>
+                <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                    Wir sind Experten für seltene und authentische Streetwear, Vintage-Pieces und Designer-Kleidung. 
+                    Jedes Stück wird sorgfältig kuratiert und auf Echtheit geprüft.
+                </p>
+                <ul>
+                    <li><a href="#">Unsere Story</a></li>
+                    <li><a href="#">Authentizitäts-Check</a></li>
+                    <li><a href="#">Nachhaltigkeit</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#products">Featured Items</a></li>
+                    <li><a href="#vintage">Vintage Archive</a></li>
+                    <li><a href="#streetwear">Streetwear Grails</a></li>
+                    <li><a href="#designer">Designer Archive</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Größenguide</a></li>
+                    <li><a href="#">Authentizitäts-Check</a></li>
+                    <li><a href="#">Versand & Rückgabe</a></li>
+                    <li><a href="#">Pflege-Guide</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Widerrufsrecht</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Benevity. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Warenkorb</h2>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="cart-empty" id="cart-empty">
+                    Ihr Warenkorb ist leer
+                </div>
+            </div>
+            <div class="cart-summary" id="cart-summary" style="display: none;">
+                <div class="cart-total">
+                    <h3>Gesamt</h3>
+                    <div class="total-price" id="total-price">€0</div>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Zur Kasse</button>
+                <button class="continue-shopping" onclick="toggleCart()">Weiter einkaufen</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(id, name, price, description) {
+            const existingItem = cart.find(item => item.id === id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    description: description,
+                    quantity: 1
+                });
+            }
+            
+            updateCartUI();
+            
+            // Visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Hinzugefügt!';
+            button.style.background = '#fff';
+            button.style.color = '#000';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'none';
+                button.style.color = '#fff';
+            }, 1000);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+
+        function updateQuantity(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(id);
+                } else {
+                    updateCartUI();
+                }
+            }
+        }
+
+        function updateCartUI() {
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            
+            const cartCountElement = document.getElementById('cart-count');
+            const totalPriceElement = document.getElementById('total-price');
+            
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount;
+            }
+            if (totalPriceElement) {
+                totalPriceElement.textContent = '€' + cartTotal;
+            }
+            
+            const cartItems = document.getElementById('cart-items');
+            const cartSummary = document.getElementById('cart-summary');
+            
+            if (!cartItems || !cartSummary) return;
+            
+            if (cart.length === 0) {
+                cartSummary.style.display = 'none';
+                cartItems.innerHTML = '<div class="cart-empty">Ihr Warenkorb ist leer</div>';
+            } else {
+                cartSummary.style.display = 'block';
+                
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">[Produktbild - ${item.name}]</div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-info">
+                                <h3>${item.name}</h3>
+                                <p>${item.description}</p>
+                            </div>
+                            <div class="cart-item-controls">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', -1)" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+                                    <span class="quantity">${item.quantity}</span>
+                                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                                </div>
+                                <button class="remove-btn" onclick="removeFromCart('${item.id}')">Entfernen</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">€${item.price * item.quantity}</div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart() {
+            const cartModal = document.getElementById('cart-modal');
+            cartModal.classList.toggle('active');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Ihr Warenkorb ist leer!');
+                return;
+            }
+            
+            alert(`Checkout wird gestartet...\n\nGesamtsumme: €${cartTotal}\nArtikel: ${cartCount}\n\nVielen Dank für Ihren Einkauf bei Benevity!`);
+            
+            // Reset cart after checkout
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Close cart when clicking outside
+        document.addEventListener('click', function(event) {
+            const cartModal = document.getElementById('cart-modal');
+            if (event.target === cartModal) {
+                toggleCart();
+            }
+        });
+
+        // Initialize cart UI when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
